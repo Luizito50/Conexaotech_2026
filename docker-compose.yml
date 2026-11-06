@@ -19,12 +19,16 @@ services:
     build: ./arquivos/node_app/
     networks:
       - frontend
+  # Container Node2
+  node2:
+    build: ./arquivos/node_app2/
+    networks:
+      - frontend
   # Container Python
   python:
     build: ./arquivos/python_app/
     networks:
       - frontend
- 
 # Define configurações da rede Interna usada para comunicação entre os containers
 networks:
   frontend:
